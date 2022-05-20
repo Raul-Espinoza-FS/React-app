@@ -1,6 +1,6 @@
 export const sygnet = [
-  '3618.6 3618.6',
-  `
+    '3618.6 3618.6',
+    `
   <style>
         .st0 {
             fill: rgb(255 255 255 / 0%)

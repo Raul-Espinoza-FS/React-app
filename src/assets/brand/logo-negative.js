@@ -1,6 +1,6 @@
 export const logoNegative = [
-  '100 60',
-  `
+    '100 60',
+    `
   <g transform="matrix(.06928 0 0 .06928 7.367398 13.505331)" fill="none">
     <circle r="50.167" cy="237.628" cx="269.529" fill="#00d8ff" />
     <g stroke="#00d8ff" stroke-width="24">
