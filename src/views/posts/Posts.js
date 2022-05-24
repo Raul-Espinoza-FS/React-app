@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { WithContext as ReactTags } from 'react-tag-input';
 import { toast } from 'react-toastify';
 import {
+    CForm,
+    CFormInput,
+    CFormLabel,
+    CFormTextarea,
     CButton,
     CCard,
     CCardBody,
@@ -9,14 +13,6 @@ import {
     CCardHeader,
     CFormFeedback,
 } from '@coreui/react';
-
-import {
-    CForm,
-    CFormInput,
-    CFormLabel,
-    CFormTextarea,
-} from '@coreui/react';
-
 import CIcon from '@coreui/icons-react'
 import { cilCheck, cilBan } from '@coreui/icons'
 import { useNavigate, useParams } from 'react-router-dom';
@@ -48,6 +44,13 @@ const Posts = () => {
         mode: params.id ? 'edit' : 'create',
     });
 
+    const setState = (updatedValue) => {
+        setStateWrapped({
+            ...state,
+            ...updatedValue
+        });
+    }
+
     useEffect(() => {
         async function fetchData() {
             // Load post info
@@ -66,13 +69,6 @@ const Posts = () => {
         fetchData();
         // eslint-disable-next-line 
     }, []);
-
-    const setState = (updatedValue) => {
-        setStateWrapped({
-            ...state,
-            ...updatedValue
-        });
-    }
 
     const handleDelete = (i) => {
         setState({
